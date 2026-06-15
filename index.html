@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohd Shahzan Mansoori | Full-Stack Developer & AI/ML Engineer Portfolio</title>
-  <meta name="description" content="Welcome to the 3D Live Portfolio of Mohd Shahzan Mansoori, a Full-Stack MERN Developer and AI/ML Engineer specializing in highly responsive web apps and emerging technology.">
-  
+  <meta name="description"
+    content="Welcome to the 3D Live Portfolio of Mohd Shahzan Mansoori, a Full-Stack MERN Developer and AI/ML Engineer specializing in highly responsive web apps and emerging technology.">
+
   <!-- SEO & Social Open Graph -->
   <meta property="og:title" content="Mohd Shahzan Mansoori | Full-Stack & AI/ML Portfolio">
-  <meta property="og:description" content="Explore the live 3D portfolio of Mohd Shahzan Mansoori—MERN Stack Developer, AI/ML Intern, and IT Engineer.">
+  <meta property="og:description"
+    content="Explore the live 3D portfolio of Mohd Shahzan Mansoori—MERN Stack Developer, AI/ML Intern, and IT Engineer.">
   <meta property="og:type" content="website">
-  
+
   <!-- Premium Fonts (Outfit for Headers, Inter for Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Custom Styling -->
   <link rel="stylesheet" href="./src/style.css">
 </head>
+
 <body>
   <!-- Cyberpunk Scanline and Grid Overlays -->
   <div class="cyber-grid"></div>
@@ -38,17 +44,26 @@
     </button>
   </div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top-btn" class="scroll-top-btn glassmorphic" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
   <!-- Top Console Telemetry Bar (Interactive Premium HUD) -->
   <div class="hud-bar glassmorphic">
-    <div class="hud-item"><span class="hud-label">SYSTEM_CORE:</span> <span class="hud-val neon-cyan">ACTIVE</span></div>
-    <div class="hud-item"><span class="hud-label">FPS:</span> <span class="hud-val neon-purple" id="hud-fps">60.0</span></div>
-    <div class="hud-item"><span class="hud-label">ML_NETWORK:</span> <span class="hud-val neon-emerald">STABLE</span></div>
-    <div class="hud-item"><span class="hud-label">TELEMETRY:</span> <span class="hud-val" id="hud-telemetry">SECTOR_LOADED</span></div>
+    <div class="hud-item"><span class="hud-label">SYSTEM_CORE:</span> <span class="hud-val neon-cyan">ACTIVE</span>
+    </div>
+    <div class="hud-item"><span class="hud-label">FPS:</span> <span class="hud-val neon-purple" id="hud-fps">60.0</span>
+    </div>
+    <div class="hud-item"><span class="hud-label">ML_NETWORK:</span> <span class="hud-val neon-emerald">STABLE</span>
+    </div>
+    <div class="hud-item"><span class="hud-label">TELEMETRY:</span> <span class="hud-val"
+        id="hud-telemetry">SECTOR_LOADED</span></div>
   </div>
 
   <!-- Main Application Wrapper -->
   <div class="app-container">
-    
+
     <!-- Navigation -->
     <header class="main-header glassmorphic">
       <div class="logo">
@@ -60,6 +75,9 @@
         <a href="#projects" class="nav-link" data-section="projects">Projects</a>
         <a href="#experience" class="nav-link" data-section="experience">Timeline</a>
         <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <a href="#" class="nav-link nav-resume-btn" id="nav-resume" aria-label="Download Resume">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
       </nav>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
         <i class="fa-solid fa-bars"></i>
@@ -68,7 +86,7 @@
 
     <!-- Sections -->
     <main>
-      
+
       <!-- HERO SECTION -->
       <section id="home" class="section hero-section active-section">
         <div class="hero-content">
@@ -80,56 +98,125 @@
             MOHD SHAHZAN <br>
             <span class="gradient-text glow-effect">MANSOORI</span>
           </h1>
-          <p class="hero-subtitle" style="font-family: var(--font-header); font-weight: 600; font-size: 1.35rem; color: var(--neon-cyan); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: -5px; text-shadow: 0 0 10px var(--neon-cyan-glow);">
-            Full-Stack Developer  •  AI/ML Intern  •  IT Engineer
-          </p>
+
+          <!-- Typewriter Role Display -->
+          <div class="typewriter-wrapper">
+            <span class="typewriter-prefix">I build </span>
+            <span id="typewriter-text" class="typewriter-text neon-cyan"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
           <p class="hero-subtitle">
-            I craft ultra-responsive full-stack MERN products, deploy scalable microservices, and design real-time data networks tailored for worldwide contracts.
+            I craft ultra-responsive full-stack MERN products, deploy scalable microservices, and design real-time data
+            networks tailored for worldwide contracts.
           </p>
+
+          <!-- Stat Counters -->
+          <div class="hero-stats">
+            <div class="stat-card glassmorphic">
+              <span class="stat-number neon-cyan" data-target="4">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-card glassmorphic">
+              <span class="stat-number neon-purple" data-target="2">0</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-card glassmorphic">
+              <span class="stat-number neon-emerald" data-target="12">0</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-card glassmorphic">
+              <span class="stat-number" style="color: var(--neon-gold);" data-target="7">0</span>
+              <span class="stat-label">CGPA+</span>
+            </div>
+          </div>
+
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary btn-glow btn-futuristic">
+            <a href="#projects" class="btn btn-primary btn-glow btn-futuristic" id="hero-explore-btn">
               <i class="fa-solid fa-cube"></i> Explore My Projects <span class="btn-skew"></span>
             </a>
-            <a href="#contact" class="btn btn-secondary btn-futuristic-sec">
+            <a href="#contact" class="btn btn-secondary btn-futuristic-sec" id="hero-contact-btn">
               Connect With Me <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
-        
+
         <!-- Interactive Instruction -->
         <div class="interaction-hint">
-          <i class="fa-solid fa-wand-magic-sparkles animate-pulse"></i> Click anywhere to deploy explosive particle data nodes
+          <i class="fa-solid fa-wand-magic-sparkles animate-pulse"></i> Click anywhere to deploy explosive particle data
+          nodes
         </div>
       </section>
 
       <!-- ABOUT & TECH STACK SECTION -->
       <section id="about" class="section about-section">
         <div class="section-container">
-          <div class="section-header">
+          <div class="section-header reveal-on-scroll">
             <span class="section-num">01.</span>
             <h2>Architectural Engineering</h2>
             <div class="accent-line"></div>
           </div>
-          
+
           <div class="about-grid">
-            <div class="about-text glassmorphic">
+            <div class="about-text glassmorphic reveal-on-scroll">
               <h3>Professional Summary</h3>
               <p>
-                I am a motivated final-year B.Tech IT student at <strong>Rajkiya Engineering College, Bijnor (AKTU)</strong>, with a cumulative CGPA of 6.5+, backed by hands-on engineering capabilities and two specialized internships.
+                I am a motivated final-year B.Tech IT student at <strong>Rajkiya Engineering College, Bijnor
+                  (AKTU)</strong>, with a cumulative CGPA of 7.5+, backed by hands-on engineering capabilities and two
+                specialized internships.
               </p>
               <p>
-                My passion lies in full-stack architecture—bridging the gap between visually spectacular user interfaces and highly secure, time-series data structures.
+                My passion lies in full-stack architecture—bridging the gap between visually spectacular user interfaces
+                and highly secure, time-series data structures.
               </p>
               <p>
-                From constructing role-based recyclers on <strong>EcoTrade</strong> with dual real-time interfaces, to implementing mathematical regressions and AR/VR systems, I strive for clean, modular algorithms.
+                From constructing role-based recyclers on <strong>EcoTrade</strong> with dual real-time interfaces, to
+                implementing mathematical regressions and AR/VR systems, I strive for clean, modular algorithms.
               </p>
+
+              <!-- Skill Progress Bars -->
+              <div class="skill-bars">
+                <h4 class="skill-bars-title">Core Proficiencies</h4>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header">
+                    <span>Full-Stack (MERN)</span><span class="skill-pct">88%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="88" style="--bar-color: var(--neon-cyan);"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header">
+                    <span>AI / Machine Learning</span><span class="skill-pct">75%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="75" style="--bar-color: var(--neon-purple);"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header">
+                    <span>DSA & Problem Solving</span><span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="80" style="--bar-color: var(--neon-emerald);"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-header">
+                    <span>AR/VR Development</span><span class="skill-pct">65%</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="65" style="--bar-color: var(--neon-gold);"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
+
             <!-- Dynamic Tech Stack Grid -->
-            <div class="tech-stack-container">
+            <div class="tech-stack-container reveal-on-scroll">
               <h3>Elite Skill Arsenal</h3>
               <div class="tech-grid">
-                
+
                 <!-- Card 1: Languages -->
                 <div class="tech-card glassmorphic-card" data-tilt>
                   <div class="card-glow" style="--glow-color: var(--neon-cyan)"></div>
@@ -144,7 +231,7 @@
                     <span class="skill-badge">Visual Basic</span>
                   </div>
                 </div>
-                
+
                 <!-- Card 2: Full-Stack -->
                 <div class="tech-card glassmorphic-card" data-tilt>
                   <div class="card-glow" style="--glow-color: var(--neon-purple)"></div>
@@ -159,7 +246,7 @@
                     <span class="skill-badge">HTML5/CSS3</span>
                   </div>
                 </div>
-                
+
                 <!-- Card 3: Databases & Tools -->
                 <div class="tech-card glassmorphic-card" data-tilt>
                   <div class="card-glow" style="--glow-color: var(--neon-emerald)"></div>
@@ -175,7 +262,7 @@
                     <span class="skill-badge">Android Studio</span>
                   </div>
                 </div>
-                
+
                 <!-- Card 4: AI/ML & Core CS -->
                 <div class="tech-card glassmorphic-card" data-tilt>
                   <div class="card-glow" style="--glow-color: var(--neon-cyan)"></div>
@@ -201,23 +288,29 @@
       <!-- PROJECTS SECTION -->
       <section id="projects" class="section projects-section">
         <div class="section-container">
-          <div class="section-header">
+          <div class="section-header reveal-on-scroll">
             <span class="section-num">02.</span>
             <h2>Deployed Showcase</h2>
             <div class="accent-line"></div>
           </div>
-          
+
           <div class="projects-carousel">
-            
+
             <!-- Project 1: EcoTrade -->
-            <article class="project-card glassmorphic-card" data-tilt>
+            <article class="project-card glassmorphic-card reveal-on-scroll" data-tilt>
               <div class="card-glow" style="--glow-color: var(--neon-cyan)"></div>
+              <div class="project-card-banner" style="--banner-color: var(--neon-cyan);">
+                <i class="fa-solid fa-leaf project-banner-icon"></i>
+              </div>
               <div class="project-header">
                 <span class="project-tag-glow cyan">Major Project • Deployed Live</span>
                 <h3>EcoTrade</h3>
               </div>
               <p class="project-desc">
-                A MERN marketplace recycling ecosystem connecting households with recycling plants to mitigate landfill waste. Designed separate dashboards with role-based accessibility, automated geolocation matchmaking using <strong>Google Maps API</strong>, and real-time status triggers via <strong>Firebase Realtime DB</strong>. Enabled continuous GitHub auto-deploys to Vercel.
+                A MERN marketplace recycling ecosystem connecting households with recycling plants to mitigate landfill
+                waste. Designed separate dashboards with role-based accessibility, automated geolocation matchmaking
+                using <strong>Google Maps API</strong>, and real-time status triggers via <strong>Firebase Realtime
+                  DB</strong>. Enabled continuous GitHub auto-deploys to Vercel.
               </p>
               <div class="badge-container">
                 <span class="tech-badge">React.js</span>
@@ -227,20 +320,27 @@
                 <span class="tech-badge">Google Maps API</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/unknownbt/waste-app" target="_blank" class="project-link" aria-label="View Github Repository"><i class="fa-brands fa-github"></i></a>
-                <a href="https://waste-app-rho.vercel.app" target="_blank" class="project-link" aria-label="View Live Project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/unknownbt/waste-app" target="_blank" class="project-link"
+                  aria-label="View Github Repository"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="https://waste-app-rho.vercel.app" target="_blank" class="project-link project-link-live"
+                  aria-label="View Live Project"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
               </div>
             </article>
 
             <!-- Project 2: Explore Vista -->
-            <article class="project-card glassmorphic-card" data-tilt>
+            <article class="project-card glassmorphic-card reveal-on-scroll" data-tilt>
               <div class="card-glow" style="--glow-color: var(--neon-purple)"></div>
+              <div class="project-card-banner" style="--banner-color: var(--neon-purple);">
+                <i class="fa-solid fa-plane-departure project-banner-icon"></i>
+              </div>
               <div class="project-header">
                 <span class="project-tag-glow purple">Travel Booking Engine</span>
                 <h3>Explore Vista</h3>
               </div>
               <p class="project-desc">
-                Full-featured travel platform enabling users to plan and book travel itineraries in a single transaction. Built a multi-step planning flow consolidating APIs from multiple systems. Integrated 3+ third-party REST APIs for live availability data using async/await error handling.
+                Full-featured travel platform enabling users to plan and book travel itineraries in a single
+                transaction. Built a multi-step planning flow consolidating APIs from multiple systems. Integrated 3+
+                third-party REST APIs for live availability data using async/await error handling.
               </p>
               <div class="badge-container">
                 <span class="tech-badge">HTML5</span>
@@ -249,20 +349,27 @@
                 <span class="tech-badge">REST APIs</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/unknownbt" target="_blank" class="project-link" aria-label="View Github Repository"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="project-link" aria-label="View Project Details"><i class="fa-solid fa-circle-info"></i></a>
+                <a href="https://github.com/unknownbt" target="_blank" class="project-link"
+                  aria-label="View Github Repository"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="project-link" aria-label="View Project Details"><i
+                    class="fa-solid fa-circle-info"></i> Details</a>
               </div>
             </article>
 
-            <!-- Project 3: Competitive Programming & Algorithmic Practice -->
-            <article class="project-card glassmorphic-card" data-tilt>
+            <!-- Project 3: Algorithm Lab -->
+            <article class="project-card glassmorphic-card reveal-on-scroll" data-tilt>
               <div class="card-glow" style="--glow-color: var(--neon-emerald)"></div>
+              <div class="project-card-banner" style="--banner-color: var(--neon-emerald);">
+                <i class="fa-solid fa-brain project-banner-icon"></i>
+              </div>
               <div class="project-header">
                 <span class="project-tag-glow emerald">Competitive Practice</span>
                 <h3>Algorithm Lab</h3>
               </div>
               <p class="project-desc">
-                Consistent DSA problem-solving and algorithmic practice across Arrays, Trees, Dynamic Programming, and Graphs. Regular participant in coding challenges and competitive platforms, training speed and complex analytical reasoning.
+                Consistent DSA problem-solving and algorithmic practice across Arrays, Trees, Dynamic Programming, and
+                Graphs. Regular participant in coding challenges and competitive platforms, training speed and complex
+                analytical reasoning.
               </p>
               <div class="badge-container">
                 <span class="tech-badge">C++ / C</span>
@@ -272,7 +379,39 @@
                 <span class="tech-badge">DSA</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/unknownbt" target="_blank" class="project-link" aria-label="View Github Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/unknownbt" target="_blank" class="project-link"
+                  aria-label="View Github Profile"><i class="fa-brands fa-github"></i> Profile</a>
+              </div>
+            </article>
+
+            <!-- Project 4: This Portfolio -->
+            <article class="project-card glassmorphic-card reveal-on-scroll project-card-featured" data-tilt>
+              <div class="card-glow" style="--glow-color: var(--neon-gold)"></div>
+              <div class="project-card-banner" style="--banner-color: var(--neon-gold);">
+                <i class="fa-solid fa-cube project-banner-icon"></i>
+              </div>
+              <div class="project-header">
+                <span class="project-tag-glow gold">Featured • This Portfolio</span>
+                <h3>3D Live Portfolio</h3>
+              </div>
+              <p class="project-desc">
+                This very portfolio — a cyberpunk-themed, immersive 3D interactive developer showcase. Built with a live
+                Three.js WebGL particle universe, glassmorphic UI, Web Audio API synth sound effects, real-time FPS
+                telemetry HUD, and tactile card tilt effects. Deployed on Vercel with GitHub CI/CD.
+              </p>
+              <div class="badge-container">
+                <span class="tech-badge">Three.js</span>
+                <span class="tech-badge">WebGL</span>
+                <span class="tech-badge">Vite</span>
+                <span class="tech-badge">Vanilla CSS</span>
+                <span class="tech-badge">Web Audio API</span>
+                <span class="tech-badge">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/unknownbt/my-portifolio" target="_blank" class="project-link"
+                  aria-label="View Github Repository"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="project-link project-link-live" aria-label="You are here!"><i
+                    class="fa-solid fa-location-dot"></i> You're here!</a>
               </div>
             </article>
 
@@ -283,51 +422,72 @@
       <!-- EXPERIENCE TIMELINE SECTION -->
       <section id="experience" class="section experience-section">
         <div class="section-container">
-          <div class="section-header">
+          <div class="section-header reveal-on-scroll">
             <span class="section-num">03.</span>
             <h2>Professional & Academic Timeline</h2>
             <div class="accent-line"></div>
           </div>
-          
+
           <div class="timeline-container">
             <div class="timeline-line"></div>
-            
+
             <!-- Timeline Item 1: AR/VR Intern -->
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <div class="timeline-marker cyan"></div>
               <div class="timeline-card glassmorphic-card">
                 <span class="timeline-date">Dec 2025</span>
                 <h3>AR/VR Development Intern</h3>
                 <span class="timeline-company">Tamizhan Skills (NSDC & Skill India Certified)</span>
                 <p>
-                  Completed hands-on AR/VR development tasks and learning sessions in a structured remote internship program. Contributed to immersive applications and emerging technologies, certified by National Skill Development Corporation and Microsoft Certified Educator.
+                  Completed hands-on AR/VR development tasks and learning sessions in a structured remote internship
+                  program. Contributed to immersive applications and emerging technologies, certified by National Skill
+                  Development Corporation and Microsoft Certified Educator.
                 </p>
+                <div class="badge-container" style="margin-top: 12px;">
+                  <span class="skill-badge">Unity</span>
+                  <span class="skill-badge">AR/VR</span>
+                  <span class="skill-badge">Immersive Tech</span>
+                </div>
               </div>
             </div>
 
             <!-- Timeline Item 2: AI/ML Intern -->
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <div class="timeline-marker purple"></div>
               <div class="timeline-card glassmorphic-card">
                 <span class="timeline-date">Sep 2025</span>
                 <h3>AI & Machine Learning Intern</h3>
                 <span class="timeline-company">Kodacy (In association with SPACE & AICTE)</span>
                 <p>
-                  Completed a 30-day intensive virtual internship focused on AI and Machine Learning. Gained practical experience in training classification models, analyzing neural networks, and developing AI applications using Python and MATLAB.
+                  Completed a 30-day intensive virtual internship focused on AI and Machine Learning. Gained practical
+                  experience in training classification models, analyzing neural networks, and developing AI
+                  applications using Python and MATLAB.
                 </p>
+                <div class="badge-container" style="margin-top: 12px;">
+                  <span class="skill-badge">Python</span>
+                  <span class="skill-badge">MATLAB</span>
+                  <span class="skill-badge">Neural Networks</span>
+                </div>
               </div>
             </div>
 
             <!-- Timeline Item 3: College B.Tech -->
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <div class="timeline-marker emerald"></div>
               <div class="timeline-card glassmorphic-card">
                 <span class="timeline-date">Nov 2022 - Jul 2026</span>
                 <h3>B.Tech — Information Technology</h3>
                 <span class="timeline-company">Rajkiya Engineering College, Bijnor (AKTU, Lucknow)</span>
                 <p>
-                  Focused on core computer science and engineering principles. Relevant coursework: Data Structures & Algorithms, Object-Oriented Programming (Java), Database Management Systems, Operating Systems, Web Technologies, Image Processing, and Cyber Security. Cumulative CGPA: 6.5+.
+                  Focused on core computer science and engineering principles. Relevant coursework: Data Structures &
+                  Algorithms, Object-Oriented Programming (Java), Database Management Systems, Operating Systems, Web
+                  Technologies, Image Processing, and Cyber Security. Cumulative CGPA: 7.5+.
                 </p>
+                <div class="badge-container" style="margin-top: 12px;">
+                  <span class="skill-badge">CGPA:7.5+</span>
+                  <span class="skill-badge">AKTU</span>
+                  <span class="skill-badge">B.Tech IT</span>
+                </div>
               </div>
             </div>
 
@@ -338,27 +498,82 @@
       <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
       <section id="certifications" class="section certifications-section" style="padding-top: 40px; min-height: auto;">
         <div class="section-container">
-          <div class="section-header">
+          <div class="section-header reveal-on-scroll">
             <span class="section-num">04.</span>
             <h2>Credentials & Achievements</h2>
             <div class="accent-line"></div>
           </div>
-          
-          <div class="tech-grid">
+
+          <div class="tech-grid reveal-on-scroll">
             <!-- Cert 1 -->
-            <div class="glassmorphic-card" style="padding: 24px;" data-tilt>
+            <div class="glassmorphic-card cert-card" style="padding: 24px;" data-tilt>
               <div class="card-glow" style="--glow-color: var(--neon-cyan)"></div>
+              <div class="cert-icon cyan"><i class="fa-solid fa-award"></i></div>
               <span class="timeline-date" style="margin-bottom: 4px;">MathWorks</span>
               <h4 style="font-size: 1.1rem; color: var(--neon-cyan); margin-bottom: 8px;">Machine Learning Onramp</h4>
-              <p style="font-size: 0.85rem; color: var(--text-secondary);">100% completed certification from MathWorks, gaining core competencies in training MATLAB machine learning networks, preparing datasets, and parsing models.</p>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">100% completed certification from MathWorks,
+                gaining core competencies in training MATLAB machine learning networks, preparing datasets, and parsing
+                models.</p>
             </div>
-            
+
             <!-- Cert 2 -->
-            <div class="glassmorphic-card" style="padding: 24px;" data-tilt>
+            <div class="glassmorphic-card cert-card" style="padding: 24px;" data-tilt>
               <div class="card-glow" style="--glow-color: var(--neon-purple)"></div>
+              <div class="cert-icon purple"><i class="fa-solid fa-star"></i></div>
               <span class="timeline-date" style="margin-bottom: 4px;">Rajkiya Engineering College</span>
-              <h4 style="font-size: 1.1rem; color: var(--neon-purple); margin-bottom: 8px;">Club Co-ordinator — Jagriti Club</h4>
-              <p style="font-size: 0.85rem; color: var(--text-secondary);">Awarded Certificate of Appreciation by Prof. Dr. Neelendra Badal for outstanding leadership, coordination, and community management in the college social club.</p>
+              <h4 style="font-size: 1.1rem; color: var(--neon-purple); margin-bottom: 8px;">Club Co-ordinator — Jagriti
+                Club</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Awarded Certificate of Appreciation by Prof.
+                Dr. Neelendra Badal for outstanding leadership, coordination, and community management in the college
+                social club.</p>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="glassmorphic-card cert-card" style="padding: 24px;" data-tilt>
+              <div class="card-glow" style="--glow-color: var(--neon-emerald)"></div>
+              <div class="cert-icon emerald"><i class="fa-solid fa-shield-halved"></i></div>
+              <span class="timeline-date" style="margin-bottom: 4px;">NSDC & Skill India</span>
+              <h4 style="font-size: 1.1rem; color: var(--neon-emerald); margin-bottom: 8px;">AR/VR Development
+                Certification</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">National-level government-certified
+                completion of AR/VR development internship, endorsed by Microsoft Certified Educator and Skill India
+                programme.</p>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="glassmorphic-card cert-card" style="padding: 24px;" data-tilt>
+              <div class="card-glow" style="--glow-color: var(--neon-gold)"></div>
+              <div class="cert-icon gold"><i class="fa-solid fa-robot"></i></div>
+              <span class="timeline-date" style="margin-bottom: 4px;">Kodacy + AICTE</span>
+              <h4 style="font-size: 1.1rem; color: var(--neon-gold); margin-bottom: 8px;">AI & ML Internship Certificate
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Issued by Kodacy in association with SPACE
+                and AICTE upon successful completion of the 30-day AI/ML intensive internship focused on classification
+                models and neural networks.</p>
+            </div>
+
+            <!-- Cert 5: TCS iON AI for All -->
+            <div class="glassmorphic-card cert-card cert-card-featured" style="padding: 24px;" data-tilt>
+              <div class="card-glow" style="--glow-color: var(--neon-cyan)"></div>
+              <div class="cert-header-row">
+                <div class="cert-icon cyan"><i class="fa-solid fa-brain"></i></div>
+                <div class="cert-issuer-badge">
+                  <i class="fa-solid fa-trophy"></i>
+                  <span>Guinness World Record</span>
+                </div>
+              </div>
+              <span class="timeline-date" style="margin-bottom: 4px;">TCS iON &nbsp;•&nbsp; Jun 2026</span>
+              <h4 style="font-size: 1.1rem; color: var(--neon-cyan); margin-bottom: 8px;">AI & Cybersecurity Awareness —
+                AI for All</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Successfully completed the <strong
+                  style="color: var(--text-primary);">AI and Cybersecurity Awareness</strong> course under the "AI for
+                All" initiative — a Guinness World Record programme by <strong
+                  style="color: var(--text-primary);">MPIT–CoE</strong> in partnership with the <strong
+                  style="color: var(--text-primary);">TCS Foundation</strong>, delivered through TCS iON in April 2026.
+              </p>
+              <div class="cert-footer-row">
+                <span class="cert-id-tag"><i class="fa-solid fa-fingerprint"></i> ID: 277082-28116861-1016</span>
+              </div>
             </div>
           </div>
         </div>
@@ -367,20 +582,21 @@
       <!-- CONTACT SECTION -->
       <section id="contact" class="section contact-section">
         <div class="section-container">
-          <div class="section-header">
+          <div class="section-header reveal-on-scroll">
             <span class="section-num">05.</span>
             <h2>Initiate Connection</h2>
             <div class="accent-line"></div>
           </div>
-          
+
           <div class="contact-grid">
-            <div class="contact-info glassmorphic">
+            <div class="contact-info glassmorphic reveal-on-scroll">
               <h3>Let's Forge Something Epic</h3>
               <p>
-                Seeking a dedicated remote intern or full-time engineer who brings full-stack expertise and AI/ML practical concepts? Send a signal!
+                Seeking a dedicated remote intern or full-time engineer who brings full-stack expertise and AI/ML
+                practical concepts? Send a signal!
               </p>
               <div class="contact-methods">
-                
+
                 <div class="contact-method">
                   <i class="fa-solid fa-envelope neon-accent-cyan"></i>
                   <div>
@@ -413,30 +629,63 @@
                   </div>
                 </div>
 
+                <div class="contact-method">
+                  <i class="fa-brands fa-linkedin neon-accent-cyan"></i>
+                  <div>
+                    <h5>LinkedIn</h5>
+                    <a href="https://linkedin.com/in/mohd-shahzan-mansoori"
+                      target="_blank">linkedin.com/in/mohd-shahzan-mansoori</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social Quick Links -->
+              <div class="social-quick-links">
+                <a href="https://github.com/unknownbt" target="_blank" class="social-icon-btn"
+                  aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/mohd-shahzan-mansoori" target="_blank" class="social-icon-btn"
+                  aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:mansoorishazhan5@gmail.com" class="social-icon-btn" aria-label="Send Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+917860425021" class="social-icon-btn" aria-label="Call">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
               </div>
             </div>
-            
+
             <!-- Contact Form -->
-            <form id="contact-form" class="contact-form glassmorphic" novalidate>
+            <form id="contact-form" class="contact-form glassmorphic reveal-on-scroll" novalidate>
               <div class="form-group">
                 <label for="form-name">Name</label>
                 <input type="text" id="form-name" required placeholder="Your name...">
                 <span class="error-msg">Name is required</span>
               </div>
-              
+
               <div class="form-group">
                 <label for="form-email">Email Address</label>
                 <input type="email" id="form-email" required placeholder="Your email address...">
                 <span class="error-msg">Valid email is required</span>
               </div>
-              
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" placeholder="Internship opportunity / Collaboration / Hire...">
+              </div>
+
               <div class="form-group">
                 <label for="form-message">Message</label>
-                <textarea id="form-message" required rows="5" placeholder="Tell me about your opportunity, project, or internship role..."></textarea>
+                <textarea id="form-message" required rows="5"
+                  placeholder="Tell me about your opportunity, project, or internship role..."></textarea>
                 <span class="error-msg">Message cannot be empty</span>
               </div>
-              
-              <button type="submit" class="btn btn-primary btn-glow btn-submit btn-futuristic">
+
+              <button type="submit" class="btn btn-primary btn-glow btn-submit btn-futuristic" id="form-submit-btn">
                 <span>Send Signal</span> <i class="fa-solid fa-paper-plane"></i>
                 <span class="btn-skew"></span>
               </button>
@@ -449,11 +698,26 @@
 
     <!-- Footer -->
     <footer class="main-footer">
-      <p>&copy; 2026 Mohd Shahzan Mansoori. All rights reserved. Designed and coded with 3D precision and high performance.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/unknownbt" target="_blank" class="footer-social-link" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/mohd-shahzan-mansoori" target="_blank" class="footer-social-link"
+          aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:mansoorishazhan5@gmail.com" class="footer-social-link" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-name">SHAHZAN<span class="neon-accent">.DEV</span></p>
+      <p class="footer-copy">&copy; 2026 Mohd Shahzan Mansoori. All rights reserved. Designed and coded with 3D
+        precision and high performance.</p>
     </footer>
 
   </div>
-  
+
   <script type="module" src="./src/main.js"></script>
 </body>
+
 </html>
